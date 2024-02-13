@@ -24,8 +24,8 @@
 <script>
 
   const randomNumber = Math.floor(Math.random() * 7);
-  const banner = document.querySelector('.banner');
-  banner.style.backgroundImage = `https://nightjar-site-astro-e1pip4w32-tengilles-projects.vercel.app/banners/${randomNumber}.gif)`;
+  const banner = document.querySelector('.banner') as HTMLElement;
+  banner.style.backgroundImage = `url(/public/banners/${randomNumber}.gif)`;
   banner.addEventListener('click', () => {
     window.location.href = '/';
   });
