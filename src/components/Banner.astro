@@ -23,9 +23,11 @@
 
 <script>
 
-  const randomNumber = Math.floor(Math.random() * 7);
+  import bannerGif5 from '../../public/banners/5.gif';
+
+  // const randomNumber = Math.floor(Math.random() * 7);
   const banner = document.querySelector('.banner') as HTMLElement;
-  banner.style.backgroundImage = `url(/public/banners/${randomNumber}.gif)`;
+  banner.style.backgroundImage = `url(${bannerGif5.src})`;
   banner.addEventListener('click', () => {
     window.location.href = '/';
   });
