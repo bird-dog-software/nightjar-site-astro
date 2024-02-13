@@ -7,7 +7,13 @@ import Banner from '../components/Banner.astro';
 	<main>
 		<Banner />
 		<div class="content">
-
+			<h3>logs</h3>
+			<!-- <p>Description coming soon...</p> -->
+			<ul>
+				<li><a href="./logs/10012024">10012024</a></li>
+				<li><a href="./logs/17012024">17012024</a></li>
+				<li><a href="./logs/24012024">24012024</a></li>
+			</ul>
 		</div>
 	</main>
 </Layout>
@@ -19,6 +25,25 @@ main {
 
 .content {
 	width: 100%;
+}
+
+ul {
+	padding: 0;
+}
+
+ul li {
+	list-style-type: none;
+	margin-bottom: 5px;
+}
+
+li a {
+	border-bottom: 2px solid red;
+	color: white;
+	text-decoration: none;
+}
+
+li a:hover {
+	color: red;
 }
 
 </style>
