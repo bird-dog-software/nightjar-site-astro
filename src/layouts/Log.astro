@@ -1,0 +1,95 @@
+---
+// interface Props {
+//   title: string;
+// }
+
+// const { title } = Astro.props;
+
+const { frontmatter } = Astro.props
+import Banner from '../components/Banner.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <div id="layout">
+      <Banner />
+      <slot />
+      <div id="bottom-spacer">&nbsp;</div>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+  :root {
+    --background-color: #13151a;
+    --font-color: #fff;
+  }
+
+  html,
+  body {
+    font-family: system-ui, sans-serif;
+    background: var(--background-color);
+    color: var(--font-color);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  pre {
+    padding: 10px;
+  }
+
+  code {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 12px;
+  }
+
+  p {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 28px;
+  }
+
+  p a {
+    border-bottom: 2px solid red;
+    color: var(--font-color);
+    text-decoration: none;
+  }
+
+  p a:hover {
+    color: red;
+  }
+
+  img {
+    max-height: 640px;
+    width: 100%;
+  }
+
+  #layout {
+    height: 100%;
+    margin: auto;
+    max-width: 800px;
+    padding: 15px;
+  }
+
+  #bottom-spacer {
+    height: 20vh;
+    width: 100%;
+  }
+</style>
