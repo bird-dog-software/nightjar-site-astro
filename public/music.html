@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Nightjar | Art</title>
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+   </head>
+   <body>
+      <!-- main -->
+      <div id="app">
+        <a href="./index.html">
+          <div class="banner">
+             <div class="quote">NIGHTJAR</div>
+             <img alt="banner" />
+          </div>
+        </a>
+
+        <h2>Music & Sound Guide / Checklist</h2>
+        <h5>References</h5>
+        <ul>
+          <li><a target="_blank" href="https://youtu.be/tyn2oQRnHBA?list=PLYvFH2GxNYeaJrq8BPGjb91ddJnbanvz1">Metal Gear: Ghost Babel OST (specifically the slower songs)</a></li>
+          <li><a target="_blank" href="https://www.youtube.com/watch?v=eGfUqhEDtq4&list=PLWYs5zVlt6JCPM4JAke8_PS-EK1a5ncZw&index=3">Tinker Tailor Soldier Spy OST</a></li>
+        </ul>
+        <h3>Todo...</h3>
+        <h4>Songs</h4>
+        <div><input type="checkbox" /><label>Main Theme</label></div>
+        <div><input type="checkbox" /><label>"Roseburrow's Channel"</label></div>
+        <div><input type="checkbox" /><label>End Theme</label></div>
+        <div><input type="checkbox" /><label>Sneaking 1</label></div>
+        <div><input type="checkbox" /><label>Sneaking 2</label></div>
+        <div><input type="checkbox" /><label>And maybe more...</label></div>
+        <h4>FX</h4>
+        <div><input type="checkbox" /><label>Caution sound (+ music?)</label></div>
+        <div><input type="checkbox" /><label>Menu sounds</label></div>
+        <div><input type="checkbox" /><label>"Noisy footsteps"</label></div>
+        <div><input type="checkbox" /><label>Various weapon sounds</label></div>
+        <div><input type="checkbox" /><label>Radio sound(s)</label></div>
+        <div><input type="checkbox" /><label>Message/Radio text sounds</label></div>
+        <div><input type="checkbox" /><label>Knock sound</label></div>
+        <div><input type="checkbox" /><label>And more...</label></div>
+
+      <!-- spacer -->
+      <div style="height: 100px; width: 100%;"></div>
+   </body>
+   <script>
+      // highlight JS
+      hljs.highlightAll();
+
+      // dynamic banners;
+      document.querySelector('.banner img').src = './img/banners/' + Math.floor(Math.random() * 7) + '.gif';
+   </script>
+</html>

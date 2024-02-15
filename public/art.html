@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Nightjar | Art</title>
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+   </head>
+   <body>
+      <!-- main -->
+      <div id="app">
+        <a href="./index.html">
+          <div class="banner">
+             <div class="quote">NIGHTJAR</div>
+             <img alt="banner" />
+          </div>
+        </a>
+
+        <h2>Art Guide / Checklist</h2>
+        <h5>References</h5>
+        <ul>
+          <li><a target="_blank" href="https://www.spriters-resource.com/game_boy_gbc/mggb/">Ghost Babel Sprites</a></li>
+          <li><a target="_blank" href="https://www.youtube.com/watch?v=qOIe1bcWAn0">Ghost Babel longplay video</a></li>
+        </ul>
+        <h3>Todo...</h3>
+        <h5>Cutscenes</h5>
+        <div><input type="checkbox" /><label>Main Menu (not really a cutscene)</label></div>
+        <div><input type="checkbox" /><label>Briefing</label></div>
+        <div><input type="checkbox" /><label>Ending</label></div>
+        <h5>Sprites</h5>
+        <div><input type="checkbox" /><label>Player sprites</label></div>
+        <ul>
+          <li>8 way run</li>
+          <li>8 way idle (stand)</li>
+          <li>8 way crouch (idle)</li>
+          <li>8 way crawl</li>
+          <li>Standing punching</li>
+          <li>Standing grab (from behind)</li>
+          <li>8 way death from standing/walking/running</li>
+          <li>8 way death from crouching</li>
+          <li>8 way death from crawling</li>
+        </ul>
+        <div><input type="checkbox" /><label>Enemy sprites (multiple colors)</label></div>
+        <ul>
+          <li>8 way walk</li>
+          <li>8 way run</li>
+          <li>8 way death from standing/walking/running</li>
+        </ul>
+        <div><input type="checkbox" /><label>Radio profile pictures</label></div>
+        <ul>
+          <li>Nightjar (player)</li>
+          <li>Cuckoo</li>
+          <li>Para-Keet</li>
+          <li>Shrike</li>
+          <li>Osprey</li>
+          <li>Roseburrow</li>
+        </ul>
+        <div><input type="checkbox" /><label>Icons</label></div>
+        <ul>
+          <li>Bird Dog logo</li>
+          <li>Radio</li>
+          <li>Handgun</li>
+          <li>Stun grenade</li>
+          <li>Assault rifle</li>
+          <li>Keycard</li>
+          <li>NO_ITEM</li>
+          <li>Probably more to come...</li>
+        </ul>
+        <div><input type="checkbox" /><label>Tilesets</label></div>
+        <br />
+        <div><a target="_blank" href="https://bird-dog-games.github.io/nightjar-site/img/map-concept.jpg">Refer to map</a></div>
+        <br />
+        <div><i>More info on these to come...</i></div>
+        <ul>
+          <li>Loading Dock</li>
+          <li>Forest 1</li>
+          <li>Osprey Boss 1</li>
+          <li>Facility</li>
+          <li>Forest 2</li>
+          <li>Proving Grounds</li>
+          <li>Osprey Boss 2</li>
+          <li>Helipad</li>
+        </ul>
+        <div><input type="checkbox" /><label>Miscellaneous</label></div>
+        <ul>
+          <li>Osprey Boss (1 and 2)</li>
+          <li>More coming soon...</li>
+        </ul>
+      </div>
+      <!-- spacer -->
+      <div style="height: 100px; width: 100%;"></div>
+   </body>
+   <script>
+      // highlight JS
+      hljs.highlightAll();
+
+      // dynamic banners;
+      document.querySelector('.banner img').src = './img/banners/' + Math.floor(Math.random() * 7) + '.gif';
+   </script>
+</html>
