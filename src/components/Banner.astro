@@ -3,12 +3,25 @@
 //   source: string,
 // }
 // const { source } = Astro.props;
+
+const bannerImages = await Astro.glob('../../public/banners/*')
+  .then(images => { return images.map(image => image.default); });
+const randomBannerImage = bannerImages[Math.floor(Math.random() * bannerImages.length)];
 ---
 
-<div class="banner">
+<div class="banner"
+     onclick="window.location.href = '/'"
+     style=`background-image: url(${randomBannerImage.src});`
+  >
+  <div class="title">NIGHTJAR</div>
 </div>
 
 <style>
+
+  @font-face {
+    font-family: 'MGS';
+    src: url(../../public/fonts/METAG___.TTF);
+  }
 
 .banner {
   background-color: #000;
@@ -19,17 +32,13 @@
   width: 100%;
 }
 
+.banner .title {
+  font-family: 'MGS';
+  font-size: 36px;
+  padding: 10px;
+}
+
 </style>
 
 <script>
-
-  import bannerGif5 from '../../public/banners/5.gif';
-
-  // const randomNumber = Math.floor(Math.random() * 7);
-  const banner = document.querySelector('.banner') as HTMLElement;
-  banner.style.backgroundImage = `url(${bannerGif5.src})`;
-  banner.addEventListener('click', () => {
-    window.location.href = '/';
-  });
-
 </script>
