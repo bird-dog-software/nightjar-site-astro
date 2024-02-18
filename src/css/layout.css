@@ -52,6 +52,10 @@ img {
   width: 100%;
 }
 
+ul li {
+  margin-bottom: 5px;
+}
+
 .notice {
   background: var(--notice-color);
   border-radius: 3px;
