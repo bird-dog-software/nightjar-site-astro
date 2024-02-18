@@ -48,8 +48,9 @@ a:hover {
 }
 
 img {
-  max-height: 800px;
-  width: 100%;
+  object-fit: cover;
+  height: auto;
+  max-width: 100%;
 }
 
 ul li {
@@ -74,4 +75,11 @@ ul li {
 #bottom-spacer {
   height: 20vh;
   width: 100%;
+}
+
+/* phones */
+@media only screen and (max-width: 600px) {
+  img {
+    max-height: 240px;
+  }
 }
